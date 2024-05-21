@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/doctor.css">
+</head>
+<body>
+    <header>
+        <a href="">返回</a>
+    </header>
+    <main>
+        <section class="section1">
+            <form action="">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>病例號碼
+                                <input type="text">
+                            </td>
+                            <td>身分證號
+                                <input type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>病患姓名
+                                <input type="text">
+                            </td>
+                            <td>
+                                性別
+                                <input type="radio" id="sex1" name="sex" value="man"><label for="sex1">男</label>
+                                <input type="radio" id="sex2" name="sex" value="woman"><label for="sex2">女</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="Allergy_history">藥物過敏史
+                                <div>
+                                    <input type="radio" id="no" name="Allergy_history" value="no"><label for="no">無</label>
+                                    <input type="radio" id="unknown" name="Allergy_history" value="unknown"><label for="unknown">不知</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="have" name="Allergy_history" value="have"><label for="have">有:</label>
+                                    <input type="checkbox" id="Pills" name="allergyhistory" value="Pills"><label for="Pills">匹林類</label>
+                                    <input type="checkbox" id="anti_inflammatory_painkillers" name="allergyhistory" value="anti_inflammatory_painkillers"><label for="anti_inflammatory_painkillers">消炎止痛藥</label>
+                                    <input type="checkbox" id="aspirin" name="allergyhistory" value="aspirin"><label for="aspirin">阿斯匹林</label>
+                                    <input type="checkbox" id="Sulfonamides" name="allergyhistory" value="Sulfonamides"><label for="Sulfonamides">磺胺類</label>
+                                    <input type="checkbox" id="penicillin" name="allergyhistory" value="penicillin"><label for="penicillin">盤尼西林</label>
+                                    <input type="checkbox" id="" name=""><label for="">其他</label>
+                                    <input type="text">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="pasthistory"><div style="width: 100%;">過去病史</div>
+                                <div><input type="checkbox" id="" name="pasthistory" value=""><label for="">無</label></div>
+                                <div><input type="checkbox" id="" name="pasthistory" value=""><label for="">高血壓</label></div>
+                                <div><input type="checkbox" id="" name="pasthistory" value=""><label for="">高血脂症</label></div>
+                                <div><input type="checkbox" id="" name="pasthistory" value=""><label for="">腎臟病</label></div>
+                                <div><input type="checkbox" id="" name="pasthistory" value=""><label for="">慢性肺病</label></div>
+                                <div><input type="checkbox" id="" name="pasthistory" value=""><label for="">糖尿病</label></div>
+                                <div><input type="checkbox" id="" name="pasthistory" value=""><label for="">蠶豆症</label></div>
+                                <div><input type="checkbox" id="" name="pasthistory" value=""><label for="">B型肝炎</label></div>
+                                <div><input type="checkbox" id="" name="pasthistory" value=""><label for="">C型肝炎</label></div>
+                                <div><input type="checkbox" id="" name="pasthistory" value=""><label for="">心血管疾病</label></div>
+                                <div><input type="checkbox" id="" name="pasthistory" value=""><label for="">牙周病</label></div>
+                                <div><input type="checkbox" id="" name="pasthistory" value=""><label for="">甲狀腺腫</label></div>
+                                <div><input type="checkbox" id="" name="pasthistory" value=""><label for="">攝護腺肥大</label></div>
+                                <div><input type="checkbox" id="" name="pasthistory" value=""><label for="">氣喘</label></div>
+                                <div><input type="checkbox" id="" name="pasthistory" value=""><label for="">消化性潰瘍</label></div>
+                                <div><input type="checkbox" id="" name="pasthistory" value=""><label for="">痛風</label></div>
+                                <div><input type="checkbox" id="" name="pasthistory" value=""><label for="">中風</label></div>
+                                <div>
+                                    <input type="checkbox" id="" name="pasthistory" value="">
+                                    <label for="">其他</label>
+                                    <input type="text">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="long_term_medication">長期用藥
+                                <div>
+                                    <input type="radio" name="long_term_medication" id="no_long_term_medication" value=""><label for="">否</label>
+                                    <input type="radio" name="long_term_medication" id="yes_long_term_medication" value=""><label for="">是</label>
+                                    藥物名稱
+                                    <input type="text">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>習慣
+                                <input type="checkbox" id="" name="habit" value=""><label for="">吸菸</label>
+                                <input type="checkbox" id="" name="habit" value=""><label for="">喝酒</label>
+                                <input type="checkbox" id="" name="habit" value=""><label for="">檳榔</label>
+                            </td>
+                            <td>懷孕
+                                <input type="radio" name="Pregnant" id="" value=""><label for="">有</label>
+                                <input type="radio" name="Pregnant" id="" value=""><label for="">無</label>
+                                <input type="radio" name="Pregnant" id="" value=""><label for="">計畫中</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="now">現病史
+                                <div>
+                                    <textarea name="" id="" rows="20%" cols="160%"></textarea>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </section>
+        <section><div class="doctorsign">醫生簽名</div></section>
+        <section class="section2">
+            <div><textarea name="" id="" rows="6%" cols="170%"></textarea></div>
+        </section>
+        <section class="section3">
+            <button type="submit" value="確認">確認</button>
+            <button type="reset" value="清除">清除</button>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>
