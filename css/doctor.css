@@ -1,0 +1,135 @@
+body{
+    width: 100%;
+    height: 1200px;
+    margin: 0%;
+    display: grid;
+    grid-template-rows: 5% auto 5%;
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+
+header{
+    background-color: #ACD6FF;
+}
+
+main{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 2%;
+}
+
+footer{
+    background-color: #ACD6FF;
+}
+
+header a{
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "標楷體";
+}
+
+section{
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+
+.doctorsign{
+    font-size: 20px;
+    font-family: "標楷體";
+    padding-left: 5%;
+}
+
+
+section.section1{
+    width: 90%;
+    height: 72%;
+    background-color: #f8f9fa;
+    margin: 0%;
+}
+
+form{
+    height: 100%;
+}
+table{
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-size: 25px;
+    font-family: "標楷體";
+}
+
+
+table td{
+    width: 50%;
+}
+td{
+    border: 1px solid black;
+}
+
+tr{
+    border: 1px solid black;
+}
+
+.Allergy_history, .pasthistory, .long_term_medication, .now{
+    vertical-align: top;
+}
+
+td.pasthistory{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 199%;
+    border: 0;
+}
+
+
+.pasthistory>div {
+    width: 14% ;
+}
+
+.pasthistory > div:last-child {
+    width: auto;
+}
+
+td.now{
+    height: 100%;
+}
+
+section.section1 textarea{
+    margin: 1%;
+}
+
+section.section2 textarea{
+    margin: 1%;
+}
+
+section.section2{
+    width: 90%;
+    height: 10%;
+    margin: 0%;
+}
+
+section.section3{
+    width: 90%;
+    height: 5%;
+    text-align: center;
+}
+
+section.section3 button{
+    font-family: "標楷體";
+    font-size: 20px;
+    background-color: #ACD6FF;
+    border: 0;
+    padding: 0.5% 2%;
+    border-radius: 15px;
+    text-align: center;
+    margin: 0.5% 2%;
+}

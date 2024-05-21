@@ -1,0 +1,74 @@
+body{
+    width: 100%;
+    height: 705px;
+    margin: 0%;
+    display: grid;
+    grid-template-rows: 8% auto 8%;
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+
+}
+
+header{
+    width: 100%;
+    height: 100%;
+    background-color: #ACD6FF;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+footer{
+    width: 100%;
+    height: 100%;
+    background-color: #ACD6FF;
+}
+
+header nav{
+    text-align: right;
+    font-size: 25px;
+    font-family: "標楷體";
+    justify-self: center;
+    padding-right: 3%;
+}
+
+header nav a{
+    text-decoration: none;
+    color: white;
+}
+
+.section1{
+    font-size: 20px;
+    font-family: "標楷體";
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin: 1%;
+}
+
+table{
+    width: 100%;
+    height: 80%;
+    padding: 1%;
+    margin: 0%;
+}
+
+tr{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding: 1%;
+    margin: 0%;
+}
+
+tr:nth-child(odd){background-color:#f8f9fa;}
+tr:nth-child(even){background-color:#ffffff;}
