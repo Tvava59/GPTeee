@@ -1,0 +1,55 @@
+/* header.css or record2.css */
+
+.med {
+    font-size: 20px;
+    margin-top: 3%;
+    margin-left: 3%;
+}
+
+.container {
+    display: flex;
+    margin-left: 3%; /* 根据需要调整左边距 */
+    margin-top: 50px;
+}
+
+.block {
+    margin: 0 80px; /* 在两个block之间添加间距 */
+    
+}
+
+table {
+    width: 500px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-collapse: collapse;
+}
+
+.highlight {
+    background-color: #C2D8EE!important; /* 改變背景顏色 */
+    width: 400px; /* 加長單元格的長度 */
+    text-align: center; /* 確保文本在單元格中居中 */
+    height: 60px;
+
+}
+
+.highlight-left {
+    background-color: #C2D8EE!important; /* 改變背景顏色 */
+    width: 200px; /* 加長單元格的長度 */
+    text-align: left; /* 確保文本在單元格中靠左對齊 */
+    padding-left: 20px; /* 添加一些内邊距，使文本不緊貼左邊框 */
+    height: 60px;
+    border-radius: 5px;
+}
+
+.highlight.middle {
+    width: 50px; /* 設置中間單元格的寬度 */
+
+    
+}
+.content{
+    height: 50px;
+    text-align: left;
+    padding-left: 30px;
+}
+.border{
+    border-bottom: 2px solid #656363;
+}

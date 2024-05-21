@@ -1,0 +1,45 @@
+.search-bar {
+    float: right; /* 調整搜索欄位置 */
+    margin-top: 20px;
+    display: flex; /* 將搜索欄內的元素水平排列 */
+    align-items: center; /* 垂直居中搜索欄內的元素 */
+}
+
+.search-bar input[type="text"] {
+    border: none;
+    border-bottom: 1px solid #ccc; /* 使用底線樣式 */
+    padding: 5px 10px;
+    margin-right: 5px;
+}
+
+.search-bar button {
+    background: url('glass.png') no-repeat center center; /* 使用背景圖片作為按鈕 */
+    background-size: cover;
+    border: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 90px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    text-align: center;
+}
+th {
+    background-color: #C5C5C5;
+}
+tr:nth-child(odd) td {
+    background-color: #F2F2F2;
+}
+
+/* 偶數行灰色背景 */
+tr:nth-child(even) td {
+    background-color: #fff;
+}
