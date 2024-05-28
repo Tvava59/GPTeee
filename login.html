@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="login.css"> 
+    <link rel="stylesheet" href="nav.css">
+</head>    
+<!--{% extends 'base.html' %}-->
+
+<!--{% block title %}Login{% endblock %}-->
+
+<!--{% block styles %}-->
+
+<!--{% endblock %}-->
+
+<!--{% block content %}-->
+<body>
+  <header>
+    <div class="logo">衛教e聊</div>
+    <nav>
+        <ul>
+            <li><a href="#">首頁</a></li>
+            <li><a href="#">登入</a></li>
+        </ul>
+    </nav>
+  </header>
+<div class="login-container">
+  <div class="card">
+    <div class="card-header">登入</div>
+    <div class="card-body">
+      <!--{% if error_message %}-->
+        <!--<div class="alert alert-danger" role="alert">{{ error_message }}</div>-->
+      <!--{% endif %}-->
+      <form method="post">
+        <!--{% csrf_token %}-->
+        <div class="form-group">
+          <!--<label for="username">Username</label>-->
+          <input type="text" class="form-control" id="username" name="username" required placeholder="身分證號">
+        </div>
+        <div class="form-group">
+          <!--<label for="password">Password</label>-->
+          <input type="password" class="form-control" id="password" name="password" required required placeholder="密碼">
+        </div>
+        <button type="submit">登入</button>
+        <div class="register">
+          <a href="register.html">會員登入</a>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+<footer>
+<div>屬於你的衛教e聊<br>Copyright © 2024 e-Chat All Rights.</div>
+</footer>
+</body>
+<!--{% endblock %}-->
