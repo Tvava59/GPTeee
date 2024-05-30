@@ -7,8 +7,8 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
-
+    background: url('../images/registerbk.png') no-repeat center center fixed;
+    background-size: cover; /* 確保圖片覆蓋整個視窗 */
 }
 
 .register-container {
@@ -20,8 +20,10 @@ body {
     min-height: 57%;
     padding: 35px 80px;
     border-radius: 90px;
-    margin-top: 30px;
+    margin-top: 100px;
     margin-bottom: 30px;
+    position: relative; /* 增加 position 屬性 */
+    top: 150px;
 }
 
 .card {
