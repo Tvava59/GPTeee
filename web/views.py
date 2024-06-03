@@ -2,6 +2,9 @@ from django.shortcuts import render,redirect
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+import random
 
 # Create your views here.
 def user_login(request):
@@ -41,3 +44,15 @@ def user_register(request):
             return render(request, "register.html", {'error_message': error_message})
     else:
         return render(request, "register.html")
+    
+@csrf_exempt
+def chatbot(request):
+    if request.method == 'POST':
+        user_message = request.POST.get('message')
+        response_message = generate_response(user_message)
+        return JsonResponse({'response': response_message})
+    return render(request, "chatbot.html")
+
+def generate_response(user_message):
+    responses = ['Hello!', 'How can I help you?', 'Nice to meet you!']
+    return random.choice(responses)

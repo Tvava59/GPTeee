@@ -23,4 +23,5 @@ urlpatterns = [
     path("", views.user_login, name='login'),
     path("index/", views.index, name='index'),
     path("register/", views.user_register, name='register'),
+    path("chatbot/", views.chatbot, name='chatbot'),
 ]
