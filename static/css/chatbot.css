@@ -18,6 +18,8 @@ header {
     width: 100%;
     height: 100%;
     margin: 0;
+    display: flex;
+    align-items: center;
 }
 
 main {
@@ -58,7 +60,6 @@ section{
 .userinput button{
     flex: 0 0 auto;
     padding: 0.5% 1.2%;
-    border-radius: 10%;
     font-family: "標楷體";
     font-size: 20px;
     display: flex;
@@ -163,7 +164,26 @@ section{
     text-align: center;
 }
 
-header h3{
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+.name {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.logout {
+    position: absolute;
+    right: 5%;
+}
+nav h3 {
+    margin: 0;
+}
+nav a {
+    text-decoration: none; 
     color: white;
-    text-align: center;
 }
