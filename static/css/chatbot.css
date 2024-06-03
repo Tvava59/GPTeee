@@ -56,7 +56,7 @@ section{
 }
 
 .userinput button{
-    flex: 0 auto;
+    flex: 0 0 auto;
     padding: 0.5% 1.2%;
     border-radius: 10%;
     font-family: "標楷體";
@@ -64,10 +64,11 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: none;
     cursor: pointer;
     background-color: #ACD6FF;
     color: white;
+    font-size: 25px;
+    border: none;
 }
 
 .message_contain{
