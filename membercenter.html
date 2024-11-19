@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員中心</title>
+    <link rel="stylesheet" href="membercenter.css">
+    <link rel="stylesheet" href="nav.css">
+</head>
+<body>
+    <!-- 頂部區域 -->
+    <div class="header">
+        <h1><a href="">屬於你的智慧e聊</a></h1>
+        <div class="header-right">
+            <p>XXX 您好</p>
+            <p><a href="">登出</a></p>
+        </div>
+    </div>
+    
+
+    <!-- 會員中心 -->
+    <div class="container">
+        <h2>基本資料</h2>
+        <div class="info-item">
+            <strong>藥物過敏史：</strong>
+            <span id="allergies">阿斯匹林, 消炎止痛藥</span>
+        </div>
+        <div class="info-item">
+            <strong>過去病史：</strong>
+            <span id="past-illness">氣喘</span>
+        </div>
+        <div class="info-item">
+            <strong>長期用藥：</strong>
+            <span id="long-term-medication">無</span>
+        </div>
+        <div class="info-item">
+            <strong>習慣：</strong>
+            <span id="habits">吸菸, 喝酒</span>
+        </div>
+        <div class="info-item">
+            <strong>懷孕：</strong>
+            <span id="pregnancy-status">無</span>
+        </div>
+        <button class="btn" onclick="showForm()">修改</button>
+    </div>
+
+    <!-- 修改資料彈窗 -->
+    <div id="formModal" class="modal hidden">
+        <div class="form-container">
+            <h2>修改資料</h2>
+
+            <!-- 藥物過敏史 -->
+            <div class="section">
+                <h3>藥物過敏史</h3>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="allergy" value="無"> 無</label>
+                    <label><input type="checkbox" name="allergy" value="不知"> 不知</label>
+                    <label><input type="checkbox" name="allergy" value="匹林類"> 匹林類</label>
+                    <label><input type="checkbox" name="allergy" value="盤尼西林"> 盤尼西林</label>
+                    <label><input type="checkbox" name="allergy" value="消炎止痛藥"> 消炎止痛藥</label>
+                    <label><input type="checkbox" name="allergy" value="阿斯匹林"> 阿斯匹林</label>
+                    <label><input type="checkbox" name="allergy" value="磺胺類"> 磺胺類</label>
+                    <label><input type="checkbox" name="allergy" value="其他"> 其他</label>
+                    <input type="text" id="allergy-other" placeholder="請輸入其他過敏" class="hidden">
+                </div>
+            </div>
+
+            <!-- 過去病史 -->
+            <div class="section">
+                <h3>過去病史</h3>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="illness" value="無"> 無</label>
+                    <label><input type="checkbox" name="illness" value="糖尿病"> 糖尿病</label>
+                    <label><input type="checkbox" name="illness" value="高血壓"> 高血壓</label>
+                    <label><input type="checkbox" name="illness" value="氣喘"> 氣喘</label>
+                    <label><input type="checkbox" name="illness" value="慢性肺病"> 慢性肺病</label>
+                    <label><input type="checkbox" name="illness" value="其他"> 其他</label>
+                    <input type="text" id="illness-other" placeholder="請輸入其他病史" class="hidden">
+                </div>
+            </div>
+
+            <!-- 長期用藥 -->
+            <div class="section">
+                <h3>長期用藥</h3>
+                <label><input type="radio" name="medication" value="否"> 否</label>
+                <label><input type="radio" name="medication" value="是"> 是</label>
+                <input type="text" id="medication-other" placeholder="請輸入藥物名稱" class="hidden">
+            </div>
+
+            <!-- 習慣 -->
+            <div class="section">
+                <h3>習慣</h3>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="habit" value="吸菸"> 吸菸</label>
+                    <label><input type="checkbox" name="habit" value="喝酒"> 喝酒</label>
+                    <label><input type="checkbox" name="habit" value="檳榔"> 檳榔</label>
+                    <label><input type="checkbox" name="habit" value="其他"> 其他</label>
+                    <input type="text" id="habit-other" placeholder="請輸入其他習慣" class="hidden">
+                </div>
+            </div>
+
+            <!-- 懷孕 -->
+            <div class="section">
+                <h3>懷孕</h3>
+                <label><input type="radio" name="pregnancy" value="無"> 無</label>
+                <label><input type="radio" name="pregnancy" value="有"> 有</label>
+                <label><input type="radio" name="pregnancy" value="計畫中"> 計畫中</label>
+            </div>
+
+            <!-- 按鈕 -->
+            <button class="btn" onclick="saveData()">儲存</button>
+            <button class="btn cancel" onclick="closeForm()">取消</button>
+        </div>
+    </div>
+
+    <script src="m.js"></script>
+</body>
+</html>

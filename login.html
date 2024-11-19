@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登入</title>
+    <link rel="stylesheet" href="nav.css"><!--"{% static 'css/nav.css' %}"-->
+    <link rel="stylesheet" href="login.css"><!--"{% static 'css/login.css' %}"-->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">首頁</a></li>
+                <li><a href="{% url 'login' %}">登入</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="login-container">
+        <div class="card">
+            <div class="card-header">登入</div>
+            <div class="card-body">
+                {% if error_message %}
+                <div class="alert alert-danger" role="alert">{{ error_message }}</div>
+                {% endif %}
+                <form method="post" action="{% url 'login' %}">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="username" name="username" required placeholder="身分證號">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="password" name="password" required placeholder="密碼">
+                    </div>
+                    <button type="submit" class="btn">登入</button>
+                    <div class="register">
+                        <a href="{% url 'register' %}">會員註冊</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footerr">
+            <div class="f1">
+                <div class="sd">屬於你的衛教e聊</div>
+                <div class="slogan">智慧科技，改善醫療</div>
+            </div>
+            <div class="f2">
+                <div class="hope">我們致力於提供更便捷的醫療資訊服務。</div>
+            </div>
+            <div class="f3">
+                <div class="copy">Copyright © 2024 e-Chat All Rights Reserved.</div>
+            </div>
+        </div>
+    </footer>
+
+    {% if error_message %}
+    <script>
+        window.alert("{{ error_message|escapejs }}");
+    </script>
+    {% elif success_message %}
+    <script>
+        window.alert("{{ success_message|escapejs }}");
+    </script>
+    {% endif %}
+</body>
+</html>
