@@ -1,0 +1,146 @@
+/* 基本樣式處理 */ 
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    position: relative;
+    z-index: 1; /* 確保內容在偽元素之上 */
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* 背景圖片占整個視窗高度 */
+    background-image: url('../images/registerbk.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top; /* 水平居中，向下偏移 */
+    z-index: -1; /* 背景圖片置於內容後面 */
+    transform: translateY(50px); /* 僅向下移動背景圖片 */
+}
+
+
+
+/* 修改 header 样式 */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #acd6ff;
+    color: white;
+    padding: 0 20px; /* 添加左右内边距 */
+    height: 90px; /* 确保高度一致 */
+    font-family: "標楷體", serif;
+}
+
+/* 中间标题样式 */
+.header h1 {
+    flex: 1;
+    text-align: center;
+    font-size: 24px;
+    margin: 0;
+}
+
+.header h1 a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.register-container {
+    margin-top: 150px; /* 确保与导航栏不重叠 */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background: white;
+    max-width: 800px;
+}
+
+.card {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card-header {
+    background: #007bff;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    padding: 15px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.submit-button {
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background: #0056b3;
+}
+
+.register, .loginsign {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.register a, .loginsign a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.register a:hover, .loginsign a:hover {
+    text-decoration: underline;
+}
+
+/* 錯誤樣式 */
+input.error {
+    border: 2px solid red;
+    background-color: #ffe6e6;
+}
+
+/* 恢復正常輸入框樣式 */
+input {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+}
+.link-style-button {
+    display: inline-block;
+    color: #007bff; /* 文字顏色 */
+    text-decoration: none; /* 移除底線 */
+    padding: 10px 20px; /* 增加文字間距 */
+    font-size: 17px; /* 字體大小 */
+    background: none; /* 背景透明 */
+    border: none; /* 移除按鈕邊框 */
+    cursor: pointer; /* 滑鼠變成手形 */
+    transition: color 0.3s; /* 增加文字顏色過渡效果 */
+}
+
+.link-style-button:hover {
+    color: #0056b3; /* 滑鼠懸停時改變文字顏色 */
+}
+
+

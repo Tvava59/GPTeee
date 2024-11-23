@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>註冊</title>
+    <link rel="stylesheet" href="../assets/css/nav.css">
+    <link rel="stylesheet" href="../assets/css/register.css">
+</head>
+<body>
+    <!-- 頂部區域 -->
+    <div class="header">
+        <h1><a href="">屬於你的衛教e聊</a></h1>
+    </div>
+
+    <main class="register-container">
+        <div class="card">
+            <div class="card-header">註冊</div>
+            <div class="card-body">
+                <form id="registration-form" method="post" action="medicalrecords.html">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="username" name="username" required placeholder="身分證號">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="email" name="email" required placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="password1" name="password1" required placeholder="密碼">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="password2" name="password2" required placeholder="確認密碼">
+                    </div>
+                    <div class="register">
+                        <button type="submit" id="next-step" class="link-style-button">下一步-填病歷</button>
+                    </div>                    
+                    <div class="loginsign">
+                        <a href="login.html">會員登入</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="../js/r.js"></script>
+</body>
+</html>
