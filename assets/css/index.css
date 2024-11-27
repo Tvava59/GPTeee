@@ -97,6 +97,7 @@ body {
     color: #FAFCFD;
     cursor: pointer;
     z-index: 1000;
+    display: none;
 }
 
 
@@ -131,7 +132,7 @@ body {
 
 
 .backk{
-    margin-top: 105px;
+    margin-top: 130px;
     background-color: #BCDEFF;
     height: 160px;
     display: flex; 
@@ -140,26 +141,20 @@ body {
 }
 
 ul {
-    list-style: none; /* 去掉默认的列表样式 */
+    list-style: none; 
     padding: 0;
     margin: 0;
     display: flex; /* 使ul内部的li横向排列 */
-    gap: 200px; /* 图片之间的间距 */
+    gap: 300px; 
 }
 
 li {
     display: flex;
-    align-items: center; /* 确保图片在li中垂直居中 */
+    align-items: center;
     flex-direction: column;
     text-align: center;
 }
 
-.chimi {
-    color: #A39274;
-    text-align: center;
-    padding-top: 200px;
-    padding-bottom: 40px;
-}
 
 
 
@@ -341,28 +336,6 @@ li {
 
 
 
-/*
-.news1 {
-    background-color: #fafafa;
-    height: 450px;
-    width: 500px;
-    border-top-left-radius: 150px;
-    border-top-right-radius: 150px;
-    
-    justify-content: center;
-    align-items: center;
-    
-
-}
-
-.news2 {
-    line-height: 70px;
-    text-align: center;
-    color: black;
-    font-size: 25px;
-
-}
-*/
 
 
 /* 心理健康 */
@@ -443,7 +416,7 @@ li {
 }
 
 .bigger img:hover {
-    transform: scale(1.2, 1.2);
+    transform: scale(1.05, 1.05);
 }
 
 
@@ -454,26 +427,3 @@ li {
 
 
 
-/* 跑出字了 */
-
-
-.bestt1 {
-    position: relative;
-    top: 20px;
-}
-
-.bestt1:hover::before {
-    position: absolute;
-    top: 0px;
-    left: -10px;
-    color: #fff;
-    font-size: 25px;
-    background: #caa3abab;
-    padding: 8px;
-    border-radius: 5px;
-    content: "TOP 3\A桔梗";
-    font-style: italic;
-    white-space: pre;
-    font-family: "秀風體W3";
-
-}

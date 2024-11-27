@@ -1,0 +1,246 @@
+* {
+    box-sizing: border-box;
+    margin: 0px auto;
+    max-width: 1600px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 90px;
+    padding: 0 20px;
+    background-color: #acd6ff;
+    font-family: 'Shippori Mincho', serif;
+    z-index: 1000;
+}
+
+.home img {
+    width: 50px;
+}
+
+/*標題 */
+.midd {
+    flex-grow: 1;
+    text-align: left;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+
+}
+
+/* 使用者文字 */
+.welcome {
+    font-size: 20px;
+    color: white;
+    margin-right: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.more img {
+    width: 30px;
+}
+
+/* 左側選單的樣式 */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    /* 初始位置隱藏在左側 */
+    width: 60%;
+    height: 100%;
+    background-color: #eebb74;
+    transition: left 0.3s ease;
+    z-index: 2000;
+    /* 確保在 nav 之上 */
+}
+
+.side-menu ul {
+    list-style-type: none;
+    padding: 20px 0 20px 0;
+}
+
+.side-menu ul li {
+    margin: 20px 0;
+}
+
+.side-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    padding-left: 20px;
+    padding: 15px;
+}
+
+.side-menu ul li a:hover {
+    background-color: #f0dbbe;
+    color: #eebb74;
+    font-weight: bold;
+}
+
+
+.side-menu ul li.logout {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+
+}
+
+/* 左側選單顯示時的樣式 */
+.side-menu.open {
+    left: 0;
+}
+
+/*footer*/
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #ACD6FF;
+    margin-top: 60px;
+    font-size: larger;
+}
+
+.f1 {
+    text-align: left;
+}
+
+.sd {
+    font-size: 40px;
+    color: #0e3e7d;
+    margin: 10px 0;
+    /* 上下居中 */
+}
+
+
+.slogan {
+    font-size: 25px;
+    line-height: 1.5;
+    /* 調整文字間距 */
+    color: #fefeff;
+    margin: 10px 0;
+}
+
+
+
+
+.f2 {
+    margin-left: 80px;
+    margin-top: -130px;
+    margin-right: 80px;
+
+}
+
+.hope {
+
+    margin-top: -30px;
+    margin-right: 200px;
+
+}
+
+.copy {
+    color: white;
+    margin-top: 10px;
+    font-size: 16px;
+    /* 調整字體大小 */
+}
+
+
+.foot {
+    background-color: #FAFAFA;
+    width: 100%;
+    height: 30px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+
+
+@keyframes scroll {
+    from {
+        transform: translateX(100%)
+    }
+
+    to {
+        transform: translateX(-100%)
+    }
+}
+
+@keyframes scroll2 {
+    from {
+        transform: translateX(0%)
+    }
+
+    to {
+        transform: translateX(-200%)
+    }
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    nav {
+        padding: 18px;
+        justify-content: space-between;
+        height: 50px;
+    }
+
+
+    .midd {
+        font-size: 18px;
+    }
+
+    .midd a {
+        font-size: 18px;
+    }
+
+    .welcome {
+        font-size: 10px;
+        margin-right: 5px;
+    }
+
+
+    .more {
+        padding-top: 5px;
+    }
+
+    .more img {
+        width: 15px;
+    }
+
+    .side-menu ul li a {
+        font-size: 15px;
+    }
+
+
+    footer .footerr {
+        flex-direction: column;
+        text-align: center;
+        font-size: 10px;
+        padding: 20px;
+        height: 50px;
+    }
+
+    footer .copy {
+        margin: 10px 0;
+        font-size: 10px;
+    }
+}
