@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登入</title>
+    <link rel="stylesheet" href="nav.css"><!--{% static 'css/nav.css' %}-->
+    <link rel="stylesheet" href="login.css"><!--{% static 'css/login.css' %}-->
+</head>
+<body>
+    <!-- 導航欄 -->
+    <nav>
+        <div class="midd">
+            <a href="{% url 'home' %}">屬於你的衛教e聊</a>
+        </div>
+    </nav>
+
+    <!-- 登入區域 -->
+    <main class="login-container">
+        <div class="card">
+            <div class="card-header">登入</div>
+            <div class="card-body">
+                {% if error_message %}
+                <div class="alert alert-danger" role="alert">{{ error_message }}</div>
+                {% endif %}
+                <form method="post" action="{% url 'login' %}">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="username" name="username" required placeholder="身分證號">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="password" name="password" required placeholder="密碼">
+                    </div>
+                    <button type="submit" class="btn">登入</button>
+                    <div class="register">
+                        <a href="{% url 'register' %}">會員註冊</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- 頁腳 -->
+    <footer class="footer">
+        <p>© 2024 屬於你的智慧e聊 | 健康管理從這裡開始</p>
+    </footer>
+
+    <!-- 提示訊息 -->
+    {% if error_message %}
+    <script>
+        window.alert("{{ error_message|escapejs }}");
+    </script>
+    {% elif success_message %}
+    <script>
+        window.alert("{{ success_message|escapejs }}");
+    </script>
+    {% endif %}
+</body>
+</html>
