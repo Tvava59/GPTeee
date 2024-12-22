@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    margin: 0px auto;
+    max-width: 1600px;
+    list-style: none;
+}
+
+
+
+
+/* Navigation Bar */
+.navbar {
+    padding: 10px 10px;
+    position: fixed;
+    /* 固定導航列 */
+    top: 0;
+    left: 50%;
+    /* 距離螢幕左側 50% */
+    transform: translateX(-50%);
+    /* 水平居中 */
+    width: 100%;
+    /* 確保填滿頁面寬度 */
+    z-index: 1000;
+    /* 保證在其他元素上方 */
+    background-color: transparent;
+    /* 初始背景透明 */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.7);
+    /* 滑動後黑色微透明 */
+    color: white;
+    /* 滑動後文字變白 */
+}
+
+.navbar .nav-links a {
+    color: inherit;
+    /* 繼承父元素顏色 */
+    text-decoration: none;
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1600px;
+    margin: 0 50px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding-right: 900px;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo span {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+.navbar.scrolled .logo span {
+    color: white;
+    /* 滾動後的字體顏色 */
+}
+
+
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links li a {
+    color: #333;
+    font-weight: 600;
+    font-size: 1em;
+}
+
+.nav-links li a:hover {
+    color: #555;
+}
+
+/* Dropdown Menu for System Section */
+.system {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.system-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 10px;
+    padding: 5px 0;
+    left: -45px;
+}
+
+.system-content a {
+    color: #333 !important;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+}
+
+.system-content a:hover {
+    background-color: #ddd;
+    border-radius: 10px;
+}
+
+.system:hover .system-content {
+    display: block;
+}
+
+.footer {
+    background: #2b2b2b;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}

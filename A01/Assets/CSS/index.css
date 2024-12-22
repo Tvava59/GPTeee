@@ -1,0 +1,307 @@
+ body {
+     font-family: Arial, sans-serif;
+     line-height: 1.6;
+     margin: 0;
+     padding: 0;
+     color: #333;
+ }
+
+
+
+
+ /* Header 基本樣式 */
+ .header {
+     top: 60px;
+     position: relative;
+     width: 100%;
+     height: 250px;
+     /* 可調整高度 */
+     overflow: hidden;
+ }
+
+ /* 底層色塊 */
+ .background-color {
+     position: absolute;
+     top: 0;
+     left: 15px;
+     width: 96%;
+     height: 90%;
+     background-color: #212537;
+     z-index: 1;
+ }
+
+ /* 前景圖片 */
+ .header-image {
+     position: absolute;
+     top: 20px;
+     left: 0;
+     width: 96%;
+     height: 90%;
+     object-fit: cover;
+     z-index: 2;
+ }
+
+ /* 中間的文字 */
+ .header-text {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     color: white;
+     font-size: 1.5em;
+     font-weight: bold;
+     text-align: center;
+     z-index: 3;
+ }
+
+
+ /* 整體區塊樣式 */
+ .origin-section {
+     display: flex;
+     align-items: center;
+     background-color: #faf7ef;
+     padding: 20px 40px;
+     border-radius: 10px;
+     /* position: relative; */
+     /* overflow: hidden; */
+     margin: 250px 200px 170px;
+     height: 400px;
+ }
+
+ /* 左側垂直文字 */
+ .vertical-text {
+     font-size: 5em;
+     font-weight: 600;
+     color: rgba(0, 0, 0, 0.154);
+     line-height: 1.2;
+     text-orientation: upright;
+     margin-right: 20px;
+     position: relative;
+     top: 140px;
+     left: -220px;
+ }
+
+ /* 右側正文區域 */
+ .content-box {
+     max-width: 800px;
+     /* 限制寬度 */
+ }
+
+ .content-box p {
+     font-size: 1em;
+     line-height: 2.5;
+     color: #333;
+     /* 正文顏色 */
+     text-align: justify;
+     /* 兩端對齊 */
+     position: relative;
+ }
+
+ /* 裝飾線條 */
+ .origin-section::after {
+     content: '';
+     position: relative;
+     bottom: -170px;
+     left: 101px;
+     width: 350px;
+     height: 2px;
+     background-color: rgba(0, 0, 0, 0.154);
+     transform: rotate(-50deg);
+ }
+
+ .origin-section::before {
+     content: '';
+     position: relative;
+     bottom: -120px;
+     left: 1050px;
+     width: 350px;
+     height: 2px;
+     background-color: rgba(0, 0, 0, 0.154);
+     transform: rotate(-50deg);
+ }
+
+ .feature {
+     position: relative;
+     padding: 100px 20px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .feature::before {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: url('/Assets/Image/doctor.png') no-repeat center center / cover;
+     opacity: 0.8;
+     /* 背景圖片透明度 */
+     z-index: -1;
+     /* 放到文字後面 */
+ }
+
+ .feature-content {
+     background-color: #faf7ef;
+     padding: 30px 200px;
+     max-width: 1186px;
+     height: 355px;
+     text-align: left;
+     border-radius: 8px;
+
+ }
+
+ .feature h2 {
+     font-size: 24px;
+     /* 標題大小 */
+     margin-bottom: 20px;
+     /* 與段落間的距離 */
+     text-align: center;
+     /* 標題居中 */
+     color: #333;
+     /* 標題顏色 */
+ }
+
+ .feature p {
+     font-size: 16px;
+     /* 文字大小 */
+     line-height: 1.8;
+     /* 行距 */
+     color: #555;
+     /* 文字顏色 */
+     line-height: 2.5;
+ }
+
+
+ .features {
+     top: 150px;
+     position: relative;
+     padding: 50px 20px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .features-container {
+     display: flex;
+     gap: 20px;
+     z-index: 1;
+     /* 保證在色塊上方 */
+     max-width: 1200px;
+ }
+
+ .features-card {
+     flex: 1;
+     background-color: #faf7ef;
+     /* 卡片背景色 */
+     padding: 30px;
+     border-radius: 8px;
+     text-align: center;
+     height: 250px;
+ }
+
+ .features-card h3 {
+     font-size: 18px;
+     color: #1a237e;
+     /* 深藍色標題 */
+     margin-bottom: 10px;
+ }
+
+ .features-card p {
+     font-size: 14px;
+     color: #4e4e4e;
+     line-height: 1.6;
+     padding: 10px 50px;
+     line-height: 1.8;
+ }
+
+ .features-background {
+     position: absolute;
+     top: 70px;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     z-index: 0;
+     /* 在卡片下方 */
+ }
+
+ .red-block {
+     background-color: #D9D9D9;
+     width: 300px;
+     height: 200px;
+     position: absolute;
+     top: -90px;
+     left: -50px;
+ }
+
+ .blue-block {
+     background-color: #D9D9D9;
+     width: 250px;
+     height: 200px;
+     position: absolute;
+     bottom: 60px;
+     right: 0px;
+ }
+
+ /* 外層樣式 */
+ .contribution {
+     margin-top: 250px;
+     display: flex;
+     flex-direction: row;
+     gap: 30px;
+     padding: 50px 100px;
+ }
+
+ /* 單一區塊樣式 */
+ .contribution-block {
+     display: flex;
+     border-radius: 8px;
+     padding: 20px;
+     width: 800px;
+ }
+
+ /* 側邊標題樣式 */
+ .contribution-title {
+     flex: 0 0 80px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background-color: #1a237e;
+     color: #fff;
+     font-size: 18px;
+     font-weight: bold;
+     text-align: center;
+     padding: 0 30px;
+ }
+
+ .contribution-title.c1 {
+     background-color: #A6D3BC;
+ }
+
+ .contribution-title.c2 {
+     background-color: #576DA6;
+ }
+
+
+ /* 內容樣式 */
+ .contribution-content {
+     flex: 1;
+     padding-left: 50px;
+ }
+
+ .contribution-content ul {
+     list-style: none;
+     padding: 0;
+     margin: 0;
+ }
+
+ .contribution-content ul li {
+     font-size: 14px;
+     color: #4e4e4e;
+     line-height: 1.8;
+     margin-bottom: 40px;
+ }
